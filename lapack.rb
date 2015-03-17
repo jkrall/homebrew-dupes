@@ -11,7 +11,7 @@ class Lapack < Formula
   keg_only :provided_by_osx
 
   def install
-    system "cmake", ".", "-DCMAKE_INSTALL_PREFIX:PATH=#{prefix}", "-DBUILD_SHARED_LIBS:BOOL=ON", "-DLAPACKE:BOOL=ON"
+    system "cmake", ".", "-DCMAKE_INSTALL_PREFIX:PATH=#{prefix}", "-DLAPACKE:BOOL=ON"
     system "make", "install"
   end
 end
